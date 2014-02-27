@@ -1,0 +1,48 @@
+- Power of JavaScript, HTML5 and CSS3
+
+- Object Oriented JavaScript:
+
+	function Person(name) { this.name = name; }
+	var person = new Person('Pinakin');
+
+	person.__proto__ === Person.prototype;				//true
+	person.__proto__ === person.constructor.prototype;	//true
+	person.constructor.prototype === Person.prototype;	//true
+
+- Why JavaScript is becoming popular?
+	http://readwrite.com/2013/08/09/why-javascript-will-become-the-dominant-programming-language-of-the-enterprise#awesm=~oh6hSWBUzlC2a1
+
+	http://redmonk.com/sogrady/2013/07/25/language-rankings-6-13/
+
+- Demo
+	- Worldify
+	- Poygon chart
+	- Meteor DataViz
+	- JSChannel
+	- proto
+	- evolutionoftheweb.com
+	- iPhone
+	- xwing
+	- forest encounter
+
+- Has been dominant language of the Web/Browsers.
+- No other language knows DOM better. (HTML5 script tag)
+- Server side App using Node.js (4 line server app in 4 mins from scratch)
+- Mobile Apps using Web Technology. (Single code base)
+- Rich client side Apps.
+- Node based frameworks like Yoeman, Bower, Grunt for faster app development and deployment.
+- Frameworks like Angular, Ember, Backbone, Knockout, jQuery etc. make web app development more fun.
+- Interactive charts libaries JSXGraph, ChartJS, RGraph, D3, Highcharts, etc. 
+- Testing frameworks like Mocha, Jasmine, Chai etc available.
+
+
+
+
+
+Power of JavaScript, HTML5 & CSS3
+Get to know:
+Why learn JavaScript?
+Why its getting popular?
+Some Cool Demos
+Road Ahead
+

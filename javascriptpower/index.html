@@ -1,0 +1,398 @@
+<!doctype html>
+
+<!--
+
+    Welcome to the light side of the source, young padawan.
+
+    One step closer to learn something interesting you are...
+
+                               ____                  
+                            _.' :  `._               
+                        .-.'`.  ;   .'`.-.           
+               __      / : ___\ ;  /___ ; \      __  
+             ,'_ ""=-.:__;".-.";: :".-.":__;.-="" _`,
+             :' `.t""=-.. '<@.`;_  ',@:` ..-=""j.' `;
+                  `:-.._J '-.-'L__ `-.-' L_..-;'     
+                    "-.__ ;  .-"  "-.  : __.-"       
+                        L ' /.======.\ ' J           
+                         "-.   "__"   .-"            
+                        __.l"-:_JL_;-";.__           
+                     .-j/'.;  ;""""  / .'\"-.        
+                   .' /:`. "-.:     .-" .';  `.      
+                .-"  / ;  "-. "-..-" .-"  :    "-.   
+             .+"-.  : :      "-.__.-"      ;-._   \  
+             ; \  `.; ;                    : : "+. ; 
+             :  ;   ; ;                    : ;  : \: 
+             ;  :   ; :                    ;:   ;  : 
+            : \  ;  :  ;                  : ;  /  :: 
+            ;  ; :   ; :                  ;   :   ;: 
+            :  :  ;  :  ;                : :  ;  : ; 
+            ;\    :   ; :                ; ;     ; ; 
+            : `."-;   :  ;              :  ;    /  ; 
+             ;    -:   ; :              ;  : .-"   : 
+             :\     \  :  ;            : \.-"      : 
+              ;`.    \  ; :            ;.'_..-=  / ; 
+              :  "-.  "-:  ;          :/."      .'  :
+               \         \ :          ;/  __        :
+                \       .-`.\        /t-""  ":-+.   :
+                 `.  .-"    `l    __/ /`. :  ; ; \  ;
+                   \   .-" .-"-.-"  .' .'j \  /   ;/ 
+                    \ / .-"   /.     .'.' ;_:'    ;  
+                     :-""-.`./-.'     /    `.___.'   
+                           \ `t  ._  /               
+                            "-.t-._:'                
+
+-->
+
+<!--
+    
+    So you'd like to know how to use impress.js?
+    
+    You've made the first, very important step - you're reading the source code.
+    And that's how impress.js presentations are built - with HTML and CSS code.
+    
+    Believe me, you need quite decent HTML and CSS skills to be able to use impress.js effectively.
+    And what is even more important, you need to be a designer, too, because there are no default
+    styles for impress.js presentations, there is no default or automatic layout for them.
+    
+    You need to design and build it by hand.
+    
+    So...
+    
+    Would you still like to know how to use impress.js?
+    
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Power of JS, HTML5, CSS3</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+<!--     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+ -->
+    <!--
+        
+        Impress.js doesn't depend on any external stylesheet. Script adds all styles it needs for
+        presentation to work.
+        
+        This style below contains styles only for demo presentation. Browse it to see how impress.js
+        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
+        you to use them directly in your presentation.
+        
+        Be creative, build your own. We don't really want all impress.js presentations to look the same,
+        do we?
+        
+        When creating your own presentation get rid of this file. Start from scratch, it's fun!
+        
+    -->
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<!--
+    
+    Body element is used by impress.js to set some useful class names, that will allow you to detect
+    the support and state of the presentation in CSS or other scripts.
+    
+    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
+    support features required by impress.js, so you should apply some fallback styles in your CSS.
+    It's not necessary to add it manually on this element. If the script detects that browser is not
+    good enough it will add this class, but keeping it in HTML means that users without JavaScript
+    will also get fallback styles.
+    
+    When impress.js script detects that browser supports all required features, this class name will
+    be removed.
+    
+    The class name on body element also depends on currently active presentation step. More details about
+    it can be found later, when `hint` element is being described.
+    
+-->
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+    
+    Now that's the core element used by impress.js.
+    
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+    
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+    
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+    
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+    
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesing things
+    right around the corner of this tag ;)
+    
+-->
+<div id="impress">
+
+    <div class="step slide" data-x="-1000" data-y="-1500">
+        <q align="center">
+            <b>Power of
+                <span class="slide-text">
+                    <span class="c0">J</span>
+                    <span class="c1">A</span>
+                    <span class="c2">V</span>
+                    <span class="c3">A</span>
+                    <span class="c4">S</span>
+                    <span class="c5">C</span>
+                    <span class="c6">R</span>
+                    <span class="c7">I</span>
+                    <span class="c8">P</span>
+                    <span class="c9">T</span>
+                </span>
+            </b><br><br>
+            Front End <b>==</b> Face of the App
+        </q>
+    </div>
+    <div class="step slide" data-x="0" data-y="-1500">
+        <q align="center">
+            <b>Object Oriented JavaScript:</b><br><br>
+        </q>
+        <pre>
+            function Person(name) { this.name = name; }
+            var person = new Person('Pinakin');
+
+            person.__proto__ == Person.prototype;
+            person.__proto__ == person.constructor.prototype;
+            person.constructor.prototype == Person.prototype;
+        </pre>
+    </div>
+    <div class="step slide" data-x="1000" data-y="-1500">
+        <q align="center">
+            <b>Why JavaScript is becoming popular?</b><br><br>
+        </q>
+    </div>
+    <div class="step slide" data-x="2000" data-y="-1500">
+        <q align="center">
+            <b>Becoming dominant programming language of the enterprise</b><br><br>
+            <a href="http://readwrite.com/2013/08/09/why-javascript-will-become-the-dominant-programming-language-of-the-enterprise" target="_blank">
+                http://readwrite.com
+            </a>
+        </q>
+    </div>
+    <div class="step slide" data-x="3000" data-y="-1500">
+        <q align="center">
+            <b>One of the Top Ranking Languages</b><br><br>
+            <a href="http://redmonk.com/sogrady/2013/07/25/language-rankings-6-13/" target="_blank">
+                http://redmonk.com
+            </a>
+        </q>
+    </div>
+    <div id="title" class="step" data-x="-900" data-y="1000" data-rotate="90" data-scale="4">
+        <span class="try">It's time for some </span>
+        <h1>Live Demo<sup>*</sup></h1>
+        <span class="footnote"><sup>*</sup>Powered by JavaScript, HTML5 & CSS3.
+        </span>
+    </div>
+    <div class="step slide" data-x="850" data-y="3000" data-rotate="360">
+        <q>
+            <b>My Recent Work:</b><br><br>
+        </q>
+        <pre>
+        - This Presentation :-))
+        - Worldify - World Map Your Numbers
+        - Polygon Chart
+        - Meteor Data Visualization
+        - JSChannel Charger
+        - LOP App Generator (Zero Coding)
+        </pre>
+    </div>
+
+    <div class="step" data-x="1660" data-y="2900" data-rotate="270" data-scale="1">
+        <p>HTML5 + CSS3 + JavaScript => <br>Build Amazing Stuffs</p>
+    </div>
+
+    <div class="step slide" data-x="-600" data-y="3000" data-rotate="360">
+        <q>Others' Interesting Work:</q><br><br>
+        <pre>
+        - <a href="http://evolutionoftheweb.com" target="_blank">evolutionoftheweb.com</a><br>
+        - <a href="http://drones.pitchinteractive.com/" target="_blank">drones.pitchinteractive.com</a><br>
+        - <a href="http://tridiv.com/" target="_blank">tridiv.com</a><br>
+        - <a href="http://bolid.es/" target="_blank">bolid.es</a><br>
+        - <a href="https://flipboard.com/section/the-javascript-%26-html5-magazine-bmOTsK" target="_blank">flipboard.com</a><br>
+        
+        </pre>
+    </div>
+
+    <div id="big" class="step" data-x="-1000" data-y="4500" data-rotate="90" data-scale="2">
+        <p>Why<b>JavaScript?</b> <span class="thoughts">Why only JavaScript?</span></p>
+    </div>
+
+    <div class="step slide" data-x="-1000" data-y="6400">
+        <q><b>Dominant</b> language of the <b>Web</b>:<br><br>
+        </q>
+        <pre>
+        - Browser understands HTML, CSS & JavaScript.<br>
+        - And browsers are everywhere (all devices).<br>
+        - Steve Jobs annouched no more Flash!!!<br>
+        - Becoming <b>Ubiquitous</b> language.
+        </pre>
+    </div>
+    
+    <!-- U -->
+    <div class="step slide" data-x="4200" data-y="4000">
+        <q>No other language knows DOM better:
+        </q>
+        <br>
+        <pre>
+        <b>Before HTML5:</b><br> 
+        &lt;script type="text/javascript" src="URL"&gt;&lt;/script&gt;<br>
+        <b>After HTML5:</b><br>  
+        &lt;script src="URL"&gt;&lt;/script&gt;<br>
+        <b>No Competitors!!!</b>
+        </pre>
+    </div>
+
+    <div class="step slide" data-x="4200" data-y="4800">
+        <q>Mobile Apps using Web Technology:</q><br>
+        <pre>
+        - PhoneGap<br>
+        - Cordova<br>
+        - Platinum<br>
+
+        Goal: One code base. Write once, run everywhere.
+        </pre>
+    </div>
+    <div class="step slide" data-x="4200" data-y="5600">
+        <q>Rich Client-side Apps:</q><br>
+        <pre>
+        - AngularJS<br>
+        - Ember<br>
+        - Knockout<br>
+        - Backbone<br>
+        - jQuery<br>
+        Goal: Make app lightweight and faster.
+        </pre>
+    </div>
+    <div class="step slide" data-x="6200" data-y="5600">
+        <q>Rich Client-side Interactivity:</q><br>
+        <pre>
+        - JSXGraph<br>
+        - ChartJS<br>
+        - RGraph<br>
+        - D3<br>
+        - Highcharts<br>
+        </pre>
+    </div>
+    <div class="step slide" data-x="6200" data-y="4800">
+        <q>Server side App using Node.js:</q><br>
+        <pre>
+        var http = require('http');
+        http.createServer(function (req, res) {
+          res.writeHead(200, {'Content-Type': 'text/plain'});
+          res.end('Hello World\n');
+        }).listen(1337, '127.0.0.1');
+        console.log('Server running at http://127.0.0.1:1337/');
+        </pre>
+    </div>
+    <div class="step slide" data-x="6200" data-y="4000">
+        <q>Node based frameworks:</q><br><br>
+        <pre>
+        - Yeoman<br>
+        - Bower<br>
+        - Grunt<br>
+        - MEAN<br>
+
+        Goal: Faster app development and deployment.
+        </pre>
+    </div>
+
+    <!-- N -->
+    <div class="step slide" data-x="9000" data-y="4000">
+        <q>Frameworks for Testing:</q><br><br>
+        <pre>
+        - Mocha<br>
+        - Jasmine<br>
+        - Chai<br>
+        </pre>
+    </div>
+    <div class="step slide" data-x="9000" data-y="4800">
+        <q>An Apple a Day == An <b>App</b> a Day</q><br>
+    </div>
+    <div class="step slide" data-x="9000" data-y="5600">
+        <q>Explore - You never know what you will get!</q><br><br>
+        <pre>
+        <a href="http://pinakintree.appspot.com">pinakintree.appspot.com</a>
+        </pre>
+    </div>
+    
+    <div class="step" data-x="9500" data-y="6600" data-rotate="-120" data-scale="4">
+
+        <h1>Thank you!!!</h1>
+    </div>
+
+    <!-- <div class="step slide" data-x="13650" data-y="5100" data-rotate="-120">
+        <q>“In computer science, a closure is a first-class function with free variables that are bound in the lexical environment. Such a function is said to be “closed over” its free variables…”</q>
+    </div>
+    <div class="step slide" data-x="13700" data-y="4100" data-rotate="-50">
+        <q>where a function remembers what happens around it</q>
+    </div>
+    <div class="step slide" data-x="14520" data-y="3520" data-rotate="-20">
+        <q>A note on memory leak</b>
+    </div>
+
+    <div class="step slide" data-x="17450" data-y="5750" data-rotate="-160">
+        <q>
+        <ul>
+            <li>Create Scope</li>
+            <li>Use apply and call</li>
+            <li>Use IIFE</li>
+            <li>Use Closure</li>
+        </ul>
+        </q>
+    </div>
+
+    <div class="step" data-x="18450" data-y="5750" data-rotate="-140" data-scale="4">
+        <h1>Thank you!!!</h1>
+    </div> -->
+
+    
+
+    
+    
+    
+    <div id="overview" class="step" data-x="11000" data-y="1500" data-scale="16">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+<script src="js/impress.js"></script>
+<script src="js/jquery-1.10.0.min.js"></script>
+<script src="js/airport.js"></script>
+<script>impress().init();</script>
+
+
+</body>
+</html>
