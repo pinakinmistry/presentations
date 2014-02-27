@@ -1,0 +1,35 @@
+FF JS:
+- What can be done with JS? KILL IT!
+- JS Birth Year and Birth Name? Birth of JavaScript @ NetScape; Evolutionoftheweb.com
+- Awesome things u can build (physics, forest)
+- My first encounter with JS
+- Doesn't compile, runs only in browser, and written in html file.
+- Most misunderstood and so most hated language; Browsers' war.
+- 2006 jQuery came in (John Resig)
+- 2008: JS Good Parts by Douglas Crockford (DOM Don, JSON, JSLint)
+- 2009: Steve Jobs said no Flash, go HTML5.
+- Lots of libraries started pouring in.
+- Magic happened: JS jumped out of browser.
+- Chat App using Node JS
+- Paradigm shift: Rich Client Apps
+- One of the top ranking languages
+
+
+Ask Why: It's Good Brain Exercise.
+Loosely typed and Dynamic Language.
+Data types.
+Local vs Global variables.
+Array vs Object.
+Size of Array.
+Functions are First Class Citizens.
+Assign function to a variable.
+Pass function to another function.
+Return function from another function.
+Methods and Properties of function.
+Default params of a function.
+Function defined in another function.
+Prototype
+
+
+
+git@githuben.intranet.mckinsey.com:SSC-LOP/KLTabletApp.git
