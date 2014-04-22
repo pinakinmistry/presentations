@@ -156,11 +156,12 @@
     </div>
     <div class="step slide" data-x="0" data-y="-1500">
         <q>
-            <br>
             <b>JavaScript Object look like?</b><br><br>
             var obj = { key1: value1, key2: value2, method1: f(), ...<br>
             }
         </q>
+        <br>
+        <b>//Exercise 1:</b> Create person object and put your name on it!
     </div>
     <div class="step slide" data-x="1000" data-y="-1500">
         <q><b>Benefits of Object:</b></q><br>
@@ -175,16 +176,16 @@
         <q><b>World without objects:</b></q><br>
         <pre>    
         var name = 'Pinakin',
-            pob = 'Mumbai',
-            skills = [...],
-            hobbies = [...];
+            birthPlace = 'Mumbai',
+            skills = ['HTML5', 'CSS3', 'OO JavaScript'],
+            hobbies = ['coding HTML5', 'coding CSS3', 'coding OOJS'];
         </pre>
     </div>
     <div class="step slide" data-x="3000" data-y="-1500">
-        <q><b>World without objects...</b></q>
+        <q><b>World without objects ...</b></q>
         <pre>    
         var names = ['Pinakin', 'Aditya', 'Vaibhav', ...],
-            pobs = ['Mumbai', 'Delhi', ...],
+            birthPlaces = ['Mumbai', 'Delhi', 'MP', ...],
             skills = [[...], [...], [...], ...],
             hobbies = [[...], [...], [...], ...];
         </pre>
@@ -192,7 +193,7 @@
     <div class="step slide" data-x="4000" data-y="-1500">
         <q><b>World without objects...</b></q>
         <pre>    
-        function process(name, pob, skills, hobbies, ...){
+        function process(name, birthPlace, skills, hobbies, ...){
 
         }
         </pre>
@@ -203,34 +204,79 @@
         var person = {
             //Data
             name: 'Pinakin',
-            pob: 'Mumbai',
+            birthPlace: 'Mumbai',
             skills: ['HTML5', 'CSS3', 'JavaScript'],
             hobbies: ['Cricket', 'Movies', 'Coding while watching
                 cricket and movies'],
             //Method
             present: function(awesomeStuff){
-
+                ...
             }
-        };
+        }; <b>//Exercise 2:</b> Redefine Yourself!!! 
         </pre>
     </div>
     <div class="step slide" data-x="6000" data-y="-1500">
-        <q align="center"><b>Ways to create a JS Object</b></q>
+        <q><b>World with objects ...</b></q>
+        <pre>   
+        var personsArray = [{...}, {...}, {...}, ...];
+        </pre>
+        <b>Home work:</b> Arrays are objects with 0, 1, 2, ... as keys!!!
     </div>
     <div class="step slide" data-x="7000" data-y="-1500">
-        <q><b>Using object literal</b></q>
+        <q><b>World with objects ...</b></q>
+        <pre>    
+        function process(person){
+            ...
+        }
+        </pre>
     </div>
     <div class="step slide" data-x="8000" data-y="-1500">
-        <q><b>Using built in contructors</b></q>
+        <q><b>Ways to create a JS Object:</b></q><br>
+        <pre>
+        - Using object literal {}<br>
+        - Using built in contructors Eg: var person = new Object();<br>
+        - Using custom constructor function(cookie cutter)<br>
     </div>
     <div class="step slide" data-x="9000" data-y="-1500">
-        <q><b>Using custom constructor function(cookie cutter)</b></q>
+        <q><b>My first custom constructor:</b></q><br>
+        <pre>
+        function <b>P</b>erson(name, birthPlace, skills, hobbies) {
+            this.name = name;
+            this.birthPlace = birthPlace;
+            this.skills = skills;
+            this.hobbies = hobbies;
+        }
+        <br>
+        <b>//Exercise 3:</b> Bake yourself well!!! 
+        </pre>
     </div>
     <div class="step slide" data-x="10000" data-y="-1500">
+        <q><b>My first private property:</b></q>
+        <pre>
+        function <b>P</b>erson(name, birthPlace, skills, hobbies) {
+            <b>var</b> password = 'initial',
+            
+            this.name = name;
+            this.birthPlace = birthPlace;
+            this.skills = skills;
+            this.hobbies = hobbies;
+            
+            this.getPassword = function(){
+                return password;
+            }
+        }
+        <br>
+        <b>//Exercise 3:</b> Bake yourself well!!! 
+        </pre>
+    </div>
+    <div class="step slide" data-x="11000" data-y="-1500">
+        <q><b>Using custom constructor function(cookie cutter)</b></q>
+    </div>
+    <div class="step slide" data-x="12000" data-y="-1500">
         <q><b>Using Object.create()</b></q>
     </div>
     
-    <div class="step slide" data-x="11000" data-y="-1500">
+    <div class="step slide" data-x="13000" data-y="-1500">
         <q><b>prototype property:</b></q>
         <pre>
         - Remember function is an object.
