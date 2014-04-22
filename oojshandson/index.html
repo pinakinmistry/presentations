@@ -176,7 +176,7 @@
         <q><b>World without objects:</b></q><br>
         <pre>    
         var name = 'Pinakin',
-            birthPlace = 'Mumbai',
+            birthYear = 1982,
             skills = ['HTML5', 'CSS3', 'OO JavaScript'],
             hobbies = ['coding HTML5', 'coding CSS3', 'coding OOJS'];
         </pre>
@@ -185,7 +185,7 @@
         <q><b>World without objects ...</b></q>
         <pre>    
         var names = ['Pinakin', 'Aditya', 'Vaibhav', ...],
-            birthPlaces = ['Mumbai', 'Delhi', 'MP', ...],
+            birthYears = [1982, 1987, 1990, ...],
             skills = [[...], [...], [...], ...],
             hobbies = [[...], [...], [...], ...];
         </pre>
@@ -193,7 +193,7 @@
     <div class="step slide" data-x="4000" data-y="-1500">
         <q><b>World without objects...</b></q>
         <pre>    
-        function process(name, birthPlace, skills, hobbies, ...){
+        function process(name, birthYear, skills, hobbies, ...){
 
         }
         </pre>
@@ -204,7 +204,7 @@
         var person = {
             //Data
             name: 'Pinakin',
-            birthPlace: 'Mumbai',
+            birthYear: 1982,
             skills: ['HTML5', 'CSS3', 'JavaScript'],
             hobbies: ['Cricket', 'Movies', 'Coding while watching
                 cricket and movies'],
@@ -240,9 +240,9 @@
     <div class="step slide" data-x="9000" data-y="-1500">
         <q><b>My first custom constructor:</b></q><br>
         <pre>
-        function <b>P</b>erson(name, birthPlace, skills, hobbies) {
+        function <b>P</b>erson(name, birthYear, skills, hobbies) {
             this.name = name;
-            this.birthPlace = birthPlace;
+            this.birthYear = birthYear;
             this.skills = skills;
             this.hobbies = hobbies;
             this.getName = function() {
@@ -256,11 +256,11 @@
     <div class="step slide" data-x="10000" data-y="-1500">
         <q><b>My first private property:</b></q>
         <pre>
-        function Person(name, birthPlace, skills, hobbies) {
+        function Person(name, birthYear, skills, hobbies) {
             <b>var</b> password = 'myBirthRight';
             
             this.name = name;
-            this.birthPlace = birthPlace;
+            this.birthYear = birthYear;
             this.skills = skills;
             this.hobbies = hobbies;
             this.getPassword = function(){
@@ -296,10 +296,10 @@
     <div class="step slide" data-x="14000" data-y="-1500">
         <q><b>Common methods on prototype object:</b></q>
         <pre>
-        function Person(name, birthPlace, skills, hobbies) {
+        function Person(name, birthYear, skills, hobbies) {
             var password = 'myBirthRight';
             this.name = name;
-            this.birthPlace = birthPlace;
+            this.birthYear = birthYear;
             this.skills = skills;
             this.hobbies = hobbies;
         }
@@ -314,10 +314,10 @@
     <div class="step slide" data-x="15000" data-y="-1500">
         <q><b>Private method:</b></q>
         <pre>
-        function Person(name, birthPlace, skills, hobbies) {
+        function Person(name, birthYear, skills, hobbies) {
             var password = <b>generatePassword();</b>
             this.name = name;
-            this.birthPlace = birthPlace;
+            this.birthYear = birthYear;
             this.skills = skills;
             this.hobbies = hobbies;
 
@@ -326,6 +326,23 @@
             }
             </b>
         }
+        </pre>
+    </div>
+    <div class="step slide" data-x="16000" data-y="-1500">
+        <q><b>Dynamix: Deleting a property</b></q>
+        <pre>
+        function Person(name, skills, hobbies, gender, birthYear) {
+            this.name = name;
+            this.skills = skills;
+            this.hobbies = hobbies;
+            this.gender = gender;
+            if(gender != 'male') {
+                delete this.birthYear;
+            } else {
+                this.birthYear = birthYear;
+            }
+        }
+        <b>Her birthYear is a secret!!</b>
         </pre>
     </div>
 
