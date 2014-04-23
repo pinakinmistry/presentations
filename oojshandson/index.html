@@ -161,7 +161,8 @@
             }
         </q>
         <br>
-        <b>//Exercise 1:</b> Create person object and put your name on it!
+        <b>Exercise 1:</b> Create &lt;yourname&gt; object first time in JavaScript:<br><br>
+        var &lt;yourname&gt; = {name: 'Vaibhav', birthYear: 1990, skills: [], hobbies: []}
     </div>
     <div class="step slide" data-x="1000" data-y="-1500">
         <q><b>Benefits of Object:</b></q><br>
@@ -201,18 +202,17 @@
     <div class="step slide" data-x="5000" data-y="-1500">
         <q><b>World with objects!!!</b></q>
         <pre>   
-        var person = {
-            //Data
+        var pinakin = {
             name: 'Pinakin',
             birthYear: 1982,
             skills: ['HTML5', 'CSS3', 'JavaScript'],
             hobbies: ['Cricket', 'Movies', 'Coding while watching
                 cricket and movies'],
-            //Method
-            present: function(awesomeStuff){
-                ...
+            presenting: function(awesomeStuff){
+                alert('Presenting ' + awesomeStuff);
             }
-        }; <b>//Exercise 2:</b> Redefine Yourself!!! 
+        };<br>
+        <b>Exercise 2:</b> Redefine Yourself!!! 
         </pre>
     </div>
     <div class="step slide" data-x="6000" data-y="-1500">
@@ -248,9 +248,9 @@
             this.getName = function() {
                 return this.name;
             }
-        }
-        <br>
-        <b>//Exercise 3:</b> Bake yourself well!!! 
+        }<br>
+        <b>Exercise 3:</b> Bake yourself well!!!
+        pinakin = new Person('Pinakin', 1982, ['html5', 'css3', 'OOJS'])
         </pre>
     </div>
     <div class="step slide" data-x="10000" data-y="-1500">
@@ -266,8 +266,9 @@
             this.getPassword = function(){
                 return password;
             }
-        }
-        <b>//Exercise 4:</b> Have some privacy!!! 
+        }<br>
+        <b>Exercise 4:</b> Have some privacy!!! 
+        pinakin = new Person('Pinakin', 1982, ['html5', 'css3', 'OOJS'])
         </pre>
     </div>
     <div class="step slide" data-x="11000" data-y="-1500">
@@ -275,23 +276,30 @@
         <br>
         <pre>
         - Remember function is an object.<br>
-        - A special birth gift for function objects.<br>
+        - A special birth gift for <b>Function objects.</b><br>
         - Points to an object.<br>
         - Common across all instance objects.<br>
-        - Instance objects don't have it.<br>
+        - Instance objects don't have it but can reach it via
+            constructor property.<br>
+            <b>pinakin.constructor.prototype == Person.prototype</b>
+            <b>pinakin.__proto__ == Person.prototype</b>
         </pre>
     </div>
     <div class="step slide" data-x="12000" data-y="-1500">
-        <q><b>prototype is a gifted property:</b>
+        <q><b>prototype is a gifted property to Function Object:</b>
             <br><br>
-            object.prototype = { constructor: this };
+            <b>functionObject</b>.prototype = { constructor: this };
+            <br><br>
+            <b>Ride on this Dragon!!!</b>
         </q>
+
     </div>
     <div class="step slide" data-x="13000" data-y="-1500">
         <q><b>Prototype Inheritance Chain:</b>
             <br><br>
-            A common place for all objects.
-        </q>
+            A common place for all instance objects.
+        </q><br>
+        <b>Eg:</b> Stationery cupboard on our floor.
     </div>
     <div class="step slide" data-x="14000" data-y="-1500">
         <q><b>Common methods on prototype object:</b></q>
@@ -307,7 +315,7 @@
             return this.name;
         }
 
-        <b>//Exercise 5:</b> How to create private method?
+        <b>Exercise 5:</b> How to create private method?
         </pre>
     </div>
 
@@ -316,13 +324,14 @@
         <pre>
         function Person(name, birthYear, skills, hobbies) {
             var password = <b>generatePassword();</b>
+            console.log(password);
             this.name = name;
             this.birthYear = birthYear;
             this.skills = skills;
             this.hobbies = hobbies;
 
             <b>function generatePassword(){
-                return 'password' + Math.random()*100;
+                return 'password' + parseInt(Math.random()*1000);
             }
             </b>
         }
@@ -336,13 +345,13 @@
             this.skills = skills;
             this.hobbies = hobbies;
             this.gender = gender;
-            if(gender != 'male') {
+            if(gender != 'male' && gender != 'Male') {
                 delete this.birthYear;
             } else {
                 this.birthYear = birthYear;
             }
-        }
-        <b>Her birthYear is a secret!!</b>
+        }<br>
+        <b>Exercise 6: Her birthYear is a secret!!</b>
         </pre>
     </div>
 
