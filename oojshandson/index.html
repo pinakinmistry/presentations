@@ -151,7 +151,7 @@
         <q align="center">
             <br>
             <b>Object Oriented JavaScript - Hands on!</b><br><br>
-            Oh Yes, you heard it right!
+            In depth on public demand!
         </q>
     </div>
     <div class="step slide" data-x="0" data-y="-1500">
@@ -249,7 +249,7 @@
                 return this.name;
             }
         }<br>
-        <b>Exercise 3:</b> Bake yourself well!!!
+        <b>Exercise 3:</b> Bake yourself well!
         pinakin = new Person('Pinakin', 1982, ['html5', 'css3', 'OOJS'])
         </pre>
     </div>
@@ -272,54 +272,6 @@
         </pre>
     </div>
     <div class="step slide" data-x="11000" data-y="-1500">
-        <q><b>prototype: Enter the Dragon!!!</b></q>
-        <br>
-        <pre>
-        - Remember function is an object.<br>
-        - A special birth gift for <b>Function objects.</b><br>
-        - Points to an object.<br>
-        - Common across all instance objects.<br>
-        - Instance objects don't have it but can reach it via
-            constructor property.<br>
-            <b>pinakin.constructor.prototype == Person.prototype</b>
-            <b>pinakin.__proto__ == Person.prototype</b>
-        </pre>
-    </div>
-    <div class="step slide" data-x="12000" data-y="-1500">
-        <q><b>prototype is a gifted property to Function Object:</b>
-            <br><br>
-            <b>functionObject</b>.prototype = { constructor: this };
-            <br><br>
-            <b>Ride on this Dragon!!!</b>
-        </q>
-
-    </div>
-    <div class="step slide" data-x="13000" data-y="-1500">
-        <q><b>Prototype Inheritance Chain:</b>
-            <br><br>
-            A common place for all instance objects.
-        </q><br>
-        <b>Eg:</b> Stationery cupboard on our floor.
-    </div>
-    <div class="step slide" data-x="14000" data-y="-1500">
-        <q><b>Common methods on prototype object:</b></q>
-        <pre>
-        function Person(name, birthYear, skills, hobbies) {
-            var password = 'myBirthRight';
-            this.name = name;
-            this.birthYear = birthYear;
-            this.skills = skills;
-            this.hobbies = hobbies;
-        }
-        <b>Person.prototype.</b>getName = function(){
-            return this.name;
-        }
-
-        <b>Exercise 5:</b> How to create private method?
-        </pre>
-    </div>
-
-    <div class="step slide" data-x="15000" data-y="-1500">
         <q><b>Private method:</b></q>
         <pre>
         function Person(name, birthYear, skills, hobbies) {
@@ -337,7 +289,7 @@
         }
         </pre>
     </div>
-    <div class="step slide" data-x="16000" data-y="-1500">
+    <div class="step slide" data-x="12000" data-y="-1500">
         <q><b>Dynamix: Deleting a property</b></q>
         <pre>
         function Person(name, skills, hobbies, gender, birthYear) {
@@ -345,15 +297,139 @@
             this.skills = skills;
             this.hobbies = hobbies;
             this.gender = gender;
+            this.birthYear = birthYear;
             if(gender != 'male' && gender != 'Male') {
                 delete this.birthYear;
-            } else {
-                this.birthYear = birthYear;
             }
         }<br>
-        <b>Exercise 6: Her birthYear is a secret!!</b>
+        <b>Exercise 5: Her birthYear is a secret!!</b>
         </pre>
     </div>
+
+    <div class="step slide" data-x="13000" data-y="-1500">
+        <q><b>Go public smartly!!!</b></q>
+        <br>
+        <pre>
+        - method on 'this' is local.<br>
+        - specific to instance object.</b><br>
+        - Not common across all object instances.<br>
+        - Share commonalities?<br>
+        - Go <b>extra mile.</b><br>
+        </pre>
+    </div>
+
+    <div class="step slide" data-x="14000" data-y="-1500">
+        <q><b>prototype: Enter the Dragon!!!</b></q>
+        <br>
+        <pre>
+        - Remember function is an object.<br>
+        - A special birth gift for <b>Function objects.</b><br>
+        - Points to an object.<br>
+        - Common across all instance objects.<br>
+        - Instance objects don't have it but can reach it via
+            constructor property.<br>
+            <b>pinakin.constructor.prototype == Person.prototype</b>
+            <b>pinakin.__proto__ == Person.prototype</b>
+        </pre>
+    </div>
+    <div class="step slide" data-x="15000" data-y="-1500">
+        <q><b>prototype is a gifted property to Function Object:</b>
+            <br><br>
+            <b>functionObject</b>.prototype = { constructor: this };
+            <br><br>
+            <b>Ride on this Dragon!!!</b>
+        </q>
+
+    </div>
+    <div class="step slide" data-x="16000" data-y="-1500">
+        <q><b>Common methods on prototype object:</b></q>
+        <pre>
+        function Person(name, birthYear, skills, hobbies) {
+            var password = 'myBirthRight';
+            this.name = name;
+            this.birthYear = birthYear;
+            this.skills = skills;
+            this.hobbies = hobbies;
+        }
+        <b>Person.prototype.</b>getName = function(){
+            return this.name;
+        }
+
+        <b>Xplore:</b> call and apply methods
+
+        </pre>
+    </div>
+    <div class="step slide" data-x="17000" data-y="-1500">
+        <q><b>Prototype Inheritance Chain: </b> <br>
+            <br><br>
+            - A common place for all instance objects.<br>
+            - Going extra mile lookin'up the chain.<br>
+        </q><br>
+    </div>
+    <div class="step slide" data-x="18000" data-y="-1500">
+        <q><b>Override: Hereafter, I will push!</b><br>
+            <br><br>
+            a.push == Array.prototype.push
+        </q><br>
+    </div>
+    <div class="step slide" data-x="19000" data-y="-1500">
+        <q><b>Inheritance: Mix 2 objects!</b></q><br>
+        <pre>
+        function Geek(name) {
+            this.name = name;
+            this.geekness = "OO JS";
+        }
+
+        Geek.prototype = new Person();
+        Geek.prototype.contructor = Geek;
+
+        vaibhav = new Geek("Vaibhav");
+        <br>
+        <b>Prototypal Inheritance: $scope in Angular JS</b>
+        </pre>
+    </div>
+    <div class="step slide" data-x="20000" data-y="-1500">
+        <q><b>Static Method: don't give me 'this'</b></q><br>
+        <pre>
+        Date.getMonday = function() {
+          var d = new Date();
+          var day = d.getDay(),
+              // adjust when day is sunday
+              diff = d.getDate() - day + (day == 0 ? -6:1); 
+          return new Date(d.setDate(diff));
+        }
+
+        Date.getMonday();
+        <br>
+        </pre>
+    </div>
+    <div class="step slide" data-x="21000" data-y="-1500">
+        <q><b>See objects everywhere!</b><br>
+        - Function <br>
+        - Array<br>
+        - Date<br>
+        - Object<br>
+        - Math ?<br>
+        </q>
+        <br>
+        Use console as microscope to explore them!
+    </div>
+    <div class="step slide" data-x="22000" data-y="-1500">
+        <q><a href="http://www.youtube.com/watch?v=yI8rYQtkwC4" target="_blank">JavaScript is everywhere video</a><br>
+        - By Douglas Crockford.
+        </q>
+        <br>
+        <pre>
+        - Father of JSON.
+        - Writer of JavaScript: The Good Parts.
+        - Speaker at upcoming JSChannel Conference.
+        </pre>
+        <br>
+        
+    </div>
+
+    
+    
 
     <div id="overview" class="step" data-x="11000" data-y="1500" data-scale="16">
     </div>
