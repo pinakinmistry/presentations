@@ -1,0 +1,35 @@
+- An App A Day = An Apple A Day;
+
+- Steps involved ?
+
+- Actual steps most people follow:
+	a. Use cases
+	b. User stories
+	c. UI Design and screen flow
+	d. Building App (frontend, backend, databases, environment, deploy...)
+	e. Phew!!! Then we need to sell it as well.
+
+4. Sell First. Prototype it before building it!
+
+5. I want it less than a week.
+
+5. App = function ProtoApp(screens) { 
+	
+	...;
+	return app;
+   
+   };
+
+6. Prototyping Reddit/HackersNews
+
+7. var screens = UIUXDesigner.getScreens(payThemWell) {
+	var screens = [];
+	...;
+	return screens;
+};
+
+8. Lets spin ProtoApp(screens);
+
+9. Wait, i need more.
+
+10. AngularFire = AngularJS + Firebase;
