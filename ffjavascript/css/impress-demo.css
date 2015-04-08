@@ -211,7 +211,7 @@ a:focus {
 
     width: 900px;
     height: 700px;
-    padding: 40px 60px;
+    padding: 40px 40px;
 
     background-color: white;
     border: 1px solid rgba(0, 0, 0, .3);
@@ -232,7 +232,7 @@ a:focus {
     font-size: 45px;
     line-height: 72px;
 
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 .slide q strong {
