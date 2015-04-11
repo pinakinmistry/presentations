@@ -1,0 +1,8 @@
+.slides h1,
+.slides h2,
+.slides h3,
+.slides h4,
+.slides h5,
+.slides h6 {
+	text-transform: none;
+}
