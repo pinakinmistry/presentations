@@ -6,3 +6,7 @@
 .slides h6 {
 	text-transform: none;
 }
+
+ul .fragment {
+	margin-top: 10px;
+}
