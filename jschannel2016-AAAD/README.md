@@ -19,3 +19,107 @@
 - Not just faster development but error free auto deployment as well
 - An App A Day
 - Embrace new tech
+
+
+
+
+
+
+
+
+#Rise of Bots:
+H&M Kik's bot shop
+HU-Bots on slack, /remind feature
+Alexa bot
+echosync.io
+facebook messanger api to create bots
+wit ai
+NLP
+
+
+
+
+#Ember:
+sdk for web
+fast-boot-server
+gcc-03 for web
+glimmer1 for templating
+Engines for multi apps into one app ???
+String loading
+Eagerly loading common modules
+
+Glimmer 2 optimized view layer core
+Engines - Lazy loading
+JavaScript modules - Svelte
+Fastboot - BigPipe
+hillary.monegraph.com
+
+
+#Effective NodeJS Debugging
+Deve Kerr
+Hapi
+github/debugging-nodejs
+httpie
+scripts in package.json: node-debug --save-live-edit server.js / & mocha --debug ./index.js
+docker compose
+node --debug 5858
+node-inspector
+node-debug --web-host 0.0.0.0
+
+
+
+#Functional UI
+tarkalabs
+@vagmi
+Om
+iamdeveloper
+immutablejs
+
+#Hardware accelerated JavaScript with WebGL
+Farhad Ghayour
+farhadg
+babylon.js - typescript
+three.js
+Famo.us
+
+OpenGL
+Shaders & GLSL
+WebGL breadth first, depth later
+Shadertoy.com
+GLSL (OpenGL Shading Language)
+Components and Swizzling
+attribute per vertex
+duck hunt black background to determine duck was hit or not
+
+
+export default class WebGLActuator {
+	constructor() {}
+
+	actuate() {
+		console.log('actuate');
+	}
+}
+
+
+
+directional light
+immersive cube
+texture mapping
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
