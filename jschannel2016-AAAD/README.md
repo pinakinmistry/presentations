@@ -105,6 +105,8 @@ export default class WebGLActuator {
 directional light
 immersive cube
 texture mapping
+threejs start from first commit
+Demo: Mixed Mode Coverflow
 
 
 
