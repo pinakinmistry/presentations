@@ -110,6 +110,32 @@ Demo: Mixed Mode Coverflow
 
 
 
+#UI and DOM API issues
+Masonryjs
+ResizeObserver
+IntersectionObserver
+Houdini
+
+
+#Webpack:
+Lifecycle
+Lifecycle event based plugins
+
+
+#Web Security:
+Input validation
+Outputs are html encoded/escape output
+Burpsuite
+innocentcompany.recruiterbox.com/app/#candidates
+
+
+#React + RxJS
+https://github.com/channikhabra/Dear-Diary
+Subject: observable to put values in it
+Actions = new Subject()
+Actions.next(makeAction(REMOVE_TAG))
+start, success, error
+
 
 
 
